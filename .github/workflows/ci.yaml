@@ -47,7 +47,7 @@ jobs:
       - name: Install Python Requirements
         run: poetry install
       - name: Run Linter
-        run: poetry run flake8
+        run: poetry run flake8 src/
       - name: Run Type Checks
         run: |
           npm install -g pyright
