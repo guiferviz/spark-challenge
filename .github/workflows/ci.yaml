@@ -57,7 +57,7 @@ jobs:
       - name: Run Tests
         run: poetry run pytest tests/
       - name: Run all
-        run: poetry shell make
+        run: poetry run make
       - name: Upload Wheel to GitHub Artifact
         uses: actions/upload-artifact@v2
         with:
