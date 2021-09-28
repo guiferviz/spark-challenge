@@ -44,6 +44,8 @@ jobs:
       - name: Add Poetry to PATH env var
         run: |
           echo "$HOME/.poetry/bin" >> $GITHUB_PATH
+      - name: Build Wheel
+        run: poetry build
       - name: Install Python Requirements
         run: poetry install
       - name: Run Linter
@@ -54,8 +56,6 @@ jobs:
           pyright
       - name: Run Tests
         run: poetry run pytest tests/
-      - name: Build Wheel
-        run: poetry build
       - name: Run all
         run: poetry shell make
       - name: Upload Wheel to GitHub Artifact
