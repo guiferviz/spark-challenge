@@ -1,0 +1,5 @@
+
+La ejecución de todas las partes de este práctica está automatizada en un
+makefile. Con solo ejecutar un `make` en la terminal 
+Excepto un largo comentario en el fichero utils el resto del código está
+lo suficientemente fraccionado como para no ser necesarios los comentarios.

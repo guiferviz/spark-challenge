@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "truata"
+version = "0.1.0"
+description = "Truata interview project"
+authors = ["guiferviz <guiferviz@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+apache-airflow = "^2.1.4"
+pyspark = "^3.1.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+pytest-mock = "^3.6.1"
+flake8 = "^3.9.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
