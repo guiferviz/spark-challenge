@@ -9,7 +9,7 @@ download_groceries:
 
 download_airbnb:
 	rm -rf /tmp/learning_spark_repo
-	git clone --depth 1 git@github.com:databricks/LearningSparkV2.git /tmp/learning_spark_repo
+	git clone --depth 1 https://github.com/databricks/LearningSparkV2.git /tmp/learning_spark_repo
 	cp -r /tmp/learning_spark_repo/mlflow-project-example/data/sf-airbnb-clean.parquet $(DOWNLOADS_DIR)
 	rm -rf /tmp/learning_spark_repo
 
