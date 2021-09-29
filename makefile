@@ -1,7 +1,7 @@
 DOWNLOADS_DIR=in
 
 
-all: download_groceries download_airbnb download_iris part1 part2 part2_airflow
+all: download_groceries download_airbnb download_iris part1 part2
 	@echo "Success :)"
 
 download_groceries:
