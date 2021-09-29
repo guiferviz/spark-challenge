@@ -1,4 +1,9 @@
+import os
+
+
 def write_text_to_file(text, filename):
+    if not os.path.exists(os.path.dirname(filename)):
+        os.makedirs(os.path.dirname(filename))
     # NOTE: This approach goes against parallelization but it is needed if we
     # want to have just one output file.
     # Another approach would be using Spark saveAsTextFile with one partition
