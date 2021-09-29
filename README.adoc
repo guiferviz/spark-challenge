@@ -1,17 +1,42 @@
 
-Spark challenge
-===============
+== Spark challenge
 
-La ejecución de todas las partes de este práctica está automatizada en un
-makefile. Con solo ejecutar un `make` en la terminal se descargarán todos los
-ficheros de datos de entrada y se ejecutarán los scripts que generan el output
-requerido.
-En el caso de tener instalado Airflow en local, con el dag folder en la ruta
-por defecto, también puedes ejecutar el dag con `make part2_airflow`.
+The execution of all the parts of this practice is **fully automated** in a
+makefile. Just running a `make` in the terminal will download all the input
+data files and run the scripts that generate the required output.
 
-Excepto un largo comentario en el fichero utils el resto del código está
-lo suficientemente factorizado como para no ser necesarios comentarios.
-El nombre de las funciones y de las variables ayuda a entender el código sin
-necesidad de comentarios.
+This repository also contains a **CI pipeline** that is executed with every
+push. As results of the execution you can find the generated Python package
+and the output files as artifact.
 
-Con `make test` puedes ejecutar todos los test de pytest.
+
+=== Prerequisites
+
+This repo contains a Python package created using
+https://python-poetry.org/[Poetry]. Installing all the dependencies in a new
+virtual environment is really easy with Poetry: `poetry install`. Start the
+virtual env with `poetry shell` and run commands like `pytest` to check that is
+working.
+
+
+=== Tests
+
+Use `make test` to run all the tests using pytest.
+
+
+=== CI Pipeline
+
+All the tests (and linters and type checkers) are run automatically when a push
+to the GitHub repo is done. If the tests are all OK, a `make` is executed, so
+the code will run using real data. The output of the executions can be found in
+the artifacts of the CI pipeline:
+
+image:./images/github_ci_output.png[Output from GitHub CI pipeline]
+
+
+=== Airflow
+
+In case you have Airflow installed locally, with the DAG folder in the default
+path, you can also run the DAG with `make part2_airflow`.
+
+image:./images/airflow.png[Airflow portal]
