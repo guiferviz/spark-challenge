@@ -1,5 +1,17 @@
 
+Spark challenge
+===============
+
 La ejecución de todas las partes de este práctica está automatizada en un
-makefile. Con solo ejecutar un `make` en la terminal 
+makefile. Con solo ejecutar un `make` en la terminal se descargarán todos los
+ficheros de datos de entrada y se ejecutarán los scripts que generan el output
+requerido.
+En el caso de tener instalado Airflow en local, con el dag folder en la ruta
+por defecto, también puedes ejecutar el dag con `make part2_airflow`.
+
 Excepto un largo comentario en el fichero utils el resto del código está
-lo suficientemente fraccionado como para no ser necesarios los comentarios.
+lo suficientemente factorizado como para no ser necesarios comentarios.
+El nombre de las funciones y de las variables ayuda a entender el código sin
+necesidad de comentarios.
+
+Con `make test` puedes ejecutar todos los test de pytest.

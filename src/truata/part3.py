@@ -1,6 +1,5 @@
 from pprint import pprint
 
-import pyspark.sql.functions as F
 import pyspark.sql.types as T
 from pyspark.ml.classification import LogisticRegression
 from pyspark.ml.feature import VectorAssembler
